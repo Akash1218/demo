@@ -54,7 +54,7 @@ def save():
     if re.match('^([\+]?\d{1,3})?\d{10}$', _cell_no) :
         _user_no = int(_cell_no[-6:])
     else:
-        return json.dumps([{'status' : 'false','msg':'Cell number validation fail'}])    
+        return json.dumps([{'status' : 'false','msg':'please enter valid entry'}])    
 
     # validate the received values
     if not _user_no and not _fname and not _lname and not _mname and not _email and not _cell_no and not _address :
